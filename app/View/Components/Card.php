@@ -8,12 +8,23 @@ use Illuminate\View\Component;
 
 class Card extends Component
 {
+    public $id;
+
+    public $label;
+
+    public $path;
+
+    public $unit;
+
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct($id, $label, $path, $unit = '')
     {
-        //
+        $this->id = $id;
+        $this->label = $label;
+        $this->path = $path;
+        $this->unit = $unit;
     }
 
     /**

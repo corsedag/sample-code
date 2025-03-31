@@ -22,20 +22,27 @@
 	@if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
 		@vite(['resources/css/app.css', 'resources/js/app.js'])
 	@endif
-
-	<script
-		defer
-		src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"
-	></script>
 </head>
 
 <body
-	x-data="{ navbar: false }"
+	x-data="{ 
+		city: 'Raleigh (North Carolina)',
+		navbar: false,
+		weather: null,
+		city_search: {
+			loading: false,
+			show: false,
+		}
+	}"
 	class="h-full bg-gray-50"
 >
-	<div class="min-h-full flex flex-col">
-		{{ $slot }}
-	</div>
+	<template x-if="true">
+		<div class="min-h-full flex flex-col">
+			{{ $slot }}
+		</div>
+	</template>
+
+	@livewireScripts
 </body>
 
 </html>
