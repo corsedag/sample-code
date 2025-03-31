@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 
 class WeatherController extends Controller
 {
-    private $latitude = 35.7721;
+    private $latitude = 40.44062;
 
-    private $longitude = -78.63861;
+    private $longitude = -79.99589;
 
     public function index(Request $request)
     {

@@ -26,7 +26,7 @@
 
 <body
 	x-data="{ 
-		city: 'Raleigh (North Carolina)',
+		city: 'Pittsburgh (Pennsylvania)',
 		navbar: false,
 		weather: null,
 		city_search: {
